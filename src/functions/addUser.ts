@@ -14,7 +14,7 @@ export default function addUser(req: Request, res: Response) {
 
     const user: IUsers = new User(name, cpf, email, age);
 
-    GrowdevBank.addClientToArray(user);
+    GrowdevBank.addUserArray(user);
 
     return res
         .status(200)

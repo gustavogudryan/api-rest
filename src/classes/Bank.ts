@@ -21,7 +21,7 @@ class Bank {
         this.users = [];
     }
 
-    addClientToArray(user: User) {
+    addUserArray(user: User) {
         this.users.push(user);
     }
 
@@ -29,12 +29,12 @@ class Bank {
         return this.users.some((user) => user.cpf === cpf);
     }
 
-    findClientById(id: string) {
+    findUserById(id: string) {
         return this.users.find((user) => user.uid === id);
     }
 
-    modifiedClientBy(id: string, name: string, cpf: string, email: string, age: number) {
-        const user = this.findClientById(id);
+    modifiedUserBy(id: string, name: string, cpf: string, email: string, age: number) {
+        const user = this.findUserById(id);
         if (!user) {
             return { status: 404, message: 'Not found' };
         }
